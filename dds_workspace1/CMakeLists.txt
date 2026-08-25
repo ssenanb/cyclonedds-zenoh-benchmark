@@ -2,14 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 project(dds_workspace1 LANGUAGES C)
 
 if(NOT TARGET CycloneDDS::ddsc)
-  # Find the CycloneDDS package.
   find_package(CycloneDDS REQUIRED)
 endif()
 
-# This is a convenience function, provided by the CycloneDDS package,
-# that will supply a library target related the the given idl file.
-# In short, it takes the idl file, generates the source files with
-# the proper data types and compiles them into a library.
 idlc_generate(TARGET myMessage_lib FILES "myMessage.idl")
 
 # Both executables have only one related source file.
