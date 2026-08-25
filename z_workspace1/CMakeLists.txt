@@ -22,6 +22,5 @@ target_link_libraries(zSubscriberLatency zenohc::lib)
 add_executable(zSubscriberThroughput subscriber-throughput.c)
 target_link_libraries(zSubscriberThroughput zenohc::lib)
 
-
 add_executable(zSubscriberThroughputv1 subscriber-throughput-v1.c)
 target_link_libraries(zSubscriberThroughputv1 zenohc::lib)
