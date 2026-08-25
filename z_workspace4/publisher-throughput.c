@@ -16,7 +16,7 @@ int main (int argc, char** argv)
     z_publisher_options_default(&opts);
     opts.is_express = true;
 
-    uint8_t value[262144];
+    uint8_t value[8]; // Configurable based on payload size
 
     for(size_t i = 0; i < sizeof(value) / sizeof(value[0]); i++)
     {
