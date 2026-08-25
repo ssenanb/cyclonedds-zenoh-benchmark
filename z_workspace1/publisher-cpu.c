@@ -7,28 +7,6 @@
 #define KEY_COUNTER 5000
 #define PUB_COUNTER 5000
 
-/*
-Topic sayısının artmasıyla birlikte hem Cyclone DDS hem de Zenoh içerisinde yönetilen topic, publisher, 
-subscriber ve yönlendirme (routing) bilgilerinin sayısı artmaktadır. 
-Bu durum middleware'in dahili veri yapılarının büyümesine ve mesaj işleme sırasında daha fazla bellek erişimi gerçekleştirilmesine neden olmaktadır. 
-Çalışma kümesinin (working set) işlemci önbellek kapasitesini aşmaya başlamasıyla birlikte 
-önbellek isabet oranı düşebilmekte ve cache miss oranı artabilmektedir. 
-Bu nedenle topic sayısındaki artışın cache miss metriklerini etkilediği değerlendirilmektedir.
-
-
-Zenoh'da şunu ekleyebilirsin:
-
-Zenoh'da her yayınlanan örnek, ilgili key expression ve abonelik bilgileriyle eşleştirilerek uygun alıcılara yönlendirilmektedir. 
-Topic sayısının artmasıyla birlikte bu eşleştirme ve yönlendirme işlemlerinde kullanılan dahili veri yapılarının büyümesi, 
-işlemci önbelleği üzerindeki baskıyı artırarak cache miss oranlarının yükselmesine katkıda bulunabilir.
-
-Benzer şekilde:
-
-Cyclone DDS'de topic, DataWriter ve DataReader ilişkileri ile history cache yapılarının yönetimi sırasında çeşitli dahili veri yapılarına erişilmektedir.
-Topic sayısının artmasıyla birlikte bu yapıların büyümesi, bellek erişim düzenini değiştirerek işlemci önbelleği kullanımını etkileyebilir.
-
-*/
-
 // 50 100 200 500 1000 1500 2000 2500 3000 3500 4000 4500 5000
 
 int main (int argc, char** argv)
@@ -73,7 +51,6 @@ int main (int argc, char** argv)
 
     }
 
-    
     while(1) 
     { 
          for(int i = 0; i < PUB_COUNTER; i++)
