@@ -26,7 +26,7 @@ int data_handler(z_loaned_sample_t *sample)
    
     counter++;
 
-    if(counter == 60001)
+    if(counter == 10001)
     {
         startTime = get_time_us();
     }
@@ -49,8 +49,6 @@ int data_handler(z_loaned_sample_t *sample)
 
         }
     }
-
-   
 
     z_drop(z_move(output_data));
 }
