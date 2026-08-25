@@ -32,7 +32,7 @@ void data_handler(z_loaned_sample_t *sample, void *arg)
 
     if(counter > 10000 && counter <= 110000)
     {
-        pkg_counter += 8;
+        pkg_counter += z_bytes_len(z_sample_payload(sample));;
 
         if(counter == 110000)
         {
