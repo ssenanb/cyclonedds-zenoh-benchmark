@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsSubscriberThroughput.dir/subscriber-throughput.c.o" CMakeFiles/ddsSubscriberThroughput.dir/myMessage.c.o -o ddsSubscriberThroughput  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.8.2 

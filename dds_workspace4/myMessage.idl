@@ -1,0 +1,7 @@
+module myMessage
+{
+    struct Msg
+    {
+        uint8 data[262144];
+    };
+};

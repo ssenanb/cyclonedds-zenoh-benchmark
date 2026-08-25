@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsSubscriberSequence.dir/subscriber-sequence.c.o" -o ddsSubscriberSequence 

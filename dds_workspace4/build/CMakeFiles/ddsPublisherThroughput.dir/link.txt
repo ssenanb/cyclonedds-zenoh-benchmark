@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsPublisherThroughput.dir/publisher-throughput.c.o" CMakeFiles/ddsPublisherThroughput.dir/myMessage.c.o -o ddsPublisherThroughput  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.8.2 

@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsSubscriberLatency.dir/subscriber-latency.c.o" CMakeFiles/ddsSubscriberLatency.dir/myMessage.c.o -o ddsSubscriberLatency  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.8.2 

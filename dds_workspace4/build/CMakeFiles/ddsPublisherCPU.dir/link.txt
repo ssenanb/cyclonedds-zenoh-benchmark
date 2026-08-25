@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsPublisherCPU.dir/publisher-cpu.c.o" CMakeFiles/ddsPublisherCPU.dir/myMessage.c.o -o ddsPublisherCPU  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.8.2 

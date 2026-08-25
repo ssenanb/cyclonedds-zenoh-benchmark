@@ -1,0 +1,9 @@
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/myMessage_lib_generate.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsPublisherCPU.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsSubscriberCPU.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsPublisherLatency.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsSubscriberLatency.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsPublisherThroughput.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/ddsSubscriberThroughput.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/edit_cache.dir
+/home/seninit/cyclonedds/dds_workspace4/build/CMakeFiles/rebuild_cache.dir

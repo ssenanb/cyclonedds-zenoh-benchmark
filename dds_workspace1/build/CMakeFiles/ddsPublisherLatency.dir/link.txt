@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ddsPublisherLatency.dir/publisher-latency.c.o" CMakeFiles/ddsPublisherLatency.dir/myMessage.c.o -o ddsPublisherLatency  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.8.2 

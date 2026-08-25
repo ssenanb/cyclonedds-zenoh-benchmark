@@ -1,0 +1,8 @@
+module myMessage
+{
+  struct Msg
+  {
+    octet data[8];
+  };
+};
+
