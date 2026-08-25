@@ -13,7 +13,6 @@ uint64_t get_time_us(void)
 }
 
 
-
  void data_handler(z_loaned_sample_t *sample, void *arg)
 {
 
@@ -47,14 +46,12 @@ uint64_t get_time_us(void)
     }
 }
 
-
-
-
 int main (int argc, char** argv)
 {
     z_owned_config_t config; 
     z_config_default(&config);
 
+    // UDP M ulticast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
 
