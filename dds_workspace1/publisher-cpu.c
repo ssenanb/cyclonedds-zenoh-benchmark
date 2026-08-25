@@ -9,7 +9,6 @@
 #define WRITER_COUNTER 5000
 
 void fillMessage(myMessage_Msg *msg);
-uint64_t get_time_us(void);
 
 int main(int argc, char **argv)
 {
