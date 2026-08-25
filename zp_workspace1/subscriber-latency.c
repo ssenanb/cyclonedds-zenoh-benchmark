@@ -29,12 +29,7 @@ void data_handler(z_loaned_sample_t *sample, void *arg)
     uint64_t sent_time;
     memcpy(&sent_time, (z_slice_data(z_loan(output_data))), sizeof(uint64_t));
 
-    //uint64_t zaman = get_time_us();
-    //printf("SEN TIME: %" PRIu64 "\n", sent_time);
-    //printf("NOW: %" PRIu64 "\n", zaman);
-    //printf("DIF: %" PRIu64 "\n", zaman - sent_time);
-
-    if(counter > 1000)
+    if(counter > 10000)
     {
         uint64_t now = get_time_us();
 
@@ -42,9 +37,9 @@ void data_handler(z_loaned_sample_t *sample, void *arg)
 
         total_latency += latency;
 
-        if(counter == 11000)
+        if(counter == 110000)
         {
-            average_latency = (uint64_t)(total_latency / 10000);
+            average_latency = (uint64_t)(total_latency / 100000);
             printf("Latency: %" PRIu64 "us\n", average_latency);
         }
     }
