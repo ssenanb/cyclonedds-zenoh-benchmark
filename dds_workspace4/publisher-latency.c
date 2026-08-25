@@ -25,20 +25,14 @@ int main(int argc, char **argv)
     dds_entity_t topic[TOPIC_COUNTER];
     dds_entity_t writer[WRITER_COUNTER];
     dds_return_t rc;
-    dds_qos_t *qos;
     char topicName[32];
     uint32_t status = 0;
     myMessage_Msg msg;
 
 
-    // Create a Participant
     participant = dds_create_participant (DDS_DOMAIN_DEFAULT, NULL, NULL);
     if (participant < 0)
         DDS_FATAL("dds_create_participant: %s\n", dds_strretcode(-participant));
-
-    //Create the QoS
-    //qos = dds_create_qos();
-    //dds_qset_reliability(qos, DDS_RELIABILITY_BEST_EFFORT, 0);
 
     for(int i = 0; i < TOPIC_COUNTER; i++)
     {
@@ -48,7 +42,7 @@ int main(int argc, char **argv)
         if (topic[i] < 0)
             DDS_FATAL("dds_create_topic: %s\n", dds_strretcode(-topic[i]));
 
-        writer[i] = dds_create_writer (participant, topic[i], NULL, NULL); //QoS
+        writer[i] = dds_create_writer (participant, topic[i], NULL, NULL); 
         if (writer[i] < 0)
             DDS_FATAL("dds_create_writer: %s\n", dds_strretcode(-writer[i]));
     }
@@ -87,7 +81,6 @@ int main(int argc, char **argv)
 
     }
 
-    // Relase the resources
     rc = dds_delete (participant);
     if (rc != DDS_RETCODE_OK)
         DDS_FATAL("dds_delete: %s\n", dds_strretcode(-rc));
