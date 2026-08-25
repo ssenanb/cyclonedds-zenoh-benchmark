@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zPublisherLatency.dir/publisher-latency.c.o" -o zPublisherLatency  /usr/local/lib/libzenohpico.a -lrt 

@@ -1,0 +1,8 @@
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zPublisherCPU.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zPublisherLatency.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zPublisherThroughput.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zSubscriberCPU.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zSubscriberLatency.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/zSubscriberThroughput.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/edit_cache.dir
+/home/seninit/zenoh-pico/zp_workspace4/build/CMakeFiles/rebuild_cache.dir

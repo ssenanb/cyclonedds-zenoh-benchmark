@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zSubscriberCPU.dir/subscriber-cpu.c.o" -o zSubscriberCPU  /usr/local/lib/libzenohpico.a -lrt 

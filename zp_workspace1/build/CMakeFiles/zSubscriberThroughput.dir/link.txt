@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zSubscriberThroughput.dir/subscriber-throughput.c.o" -o zSubscriberThroughput  /usr/local/lib/libzenohpico.a -lrt 

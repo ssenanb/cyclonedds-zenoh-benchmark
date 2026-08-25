@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zPublisherCPU.dir/publisher-cpu.c.o" -o zPublisherCPU  /usr/local/lib/libzenohpico.a -lrt 
