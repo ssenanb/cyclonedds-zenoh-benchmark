@@ -27,6 +27,7 @@ int main (int argc, char** argv)
     
     uint8_t value[] = {1, 2, 3, 4, 5, 6, 7, 8};
 
+    // UDP Multicast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
     
@@ -51,10 +52,6 @@ int main (int argc, char** argv)
                 exit(-1);
 
             z_publisher_put(z_loan(pub[i]), z_move(payload), NULL);  
-            
-            //counter++;
-
-            //printf("Counter: %" PRIu64 "\n", counter);
             
         }
     }
