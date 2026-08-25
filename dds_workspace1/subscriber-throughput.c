@@ -88,11 +88,8 @@ int main(int argc, char **argv)
                             {
 
                                 uint64_t endTime = get_time_us();
-
                                 double elapsed_sec = (double)(endTime - startTime) / 1000000.0;
-
                                 double mb_per_sec  = (double)pkg_counter / (elapsed_sec * 1024.0 * 1024.0);
-
                                 printf("Throughput: %.3f \n", mb_per_sec);
 
                             }
