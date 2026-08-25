@@ -3,9 +3,6 @@
 #include "inttypes.h"
 #include "time.h"
 
-
-uint64_t timeStart; 
-
 uint64_t get_time_us(void)
 {
     struct timespec ts;
@@ -54,6 +51,7 @@ int main (int argc, char** argv)
     z_owned_config_t config; 
     z_config_default(&config);
 
+    // UDP Multicast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
     
@@ -68,8 +66,6 @@ int main (int argc, char** argv)
     z_owned_closure_sample_t callback;
     z_closure_sample(&callback, data_handler, NULL, NULL);
     
-    timeStart = get_time_us();
-
     z_owned_subscriber_t sub;
     if(z_declare_subscriber(z_loan(session), &sub, z_loan(key_expr), z_move(callback), NULL) < 0)
         return 0;
