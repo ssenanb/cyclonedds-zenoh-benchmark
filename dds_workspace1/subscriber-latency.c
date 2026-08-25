@@ -57,7 +57,6 @@ int main(int argc, char **argv)
     printf("---SUBSCRIBER, TOPIC AND READER ARE CREATED---\n");
     fflush (stdout);
     
-    // Allocate space equal to the message size and samples[0] is starting point
     samples[0] = myMessage_Msg__alloc ();
 
 
