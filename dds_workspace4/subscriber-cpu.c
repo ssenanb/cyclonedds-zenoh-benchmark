@@ -14,19 +14,14 @@ int main(int argc, char **argv)
     dds_entity_t topic[TOPIC_COUNTER];
     dds_entity_t reader[READER_COUNTER];
     dds_return_t rc;
-    dds_qos_t *qos;
     char topicName[32];
     myMessage_Msg *msg;
-    void *samples[MAX_SAMPLES]; // the free space created in RAM with myMessage_Msg__alloc()
-    dds_sample_info_t infos[MAX_SAMPLES]; // for status control such as valid
+    void *samples[MAX_SAMPLES]; 
+    dds_sample_info_t infos[MAX_SAMPLES]; 
 
-    // Create a Participant
     participant = dds_create_participant (DDS_DOMAIN_DEFAULT, NULL, NULL);
     if (participant < 0)
         DDS_FATAL("dds_create_participant: %s\n", dds_strretcode(-participant));
-
-    //qos = dds_create_qos();
-    //dds_qset_reliability(qos, DDS_RELIABILITY_BEST_EFFORT, 0);
 
     for(int i = 0; i < TOPIC_COUNTER; i++)
     {
@@ -36,7 +31,7 @@ int main(int argc, char **argv)
         if (topic[i] < 0)
             DDS_FATAL("dds_create_topic: %s\n", dds_strretcode(-topic[i]));
 
-        reader[i] = dds_create_reader (participant, topic[i], NULL, NULL); //QoS
+        reader[i] = dds_create_reader (participant, topic[i], NULL, NULL); 
         if (reader[i] < 0)
             DDS_FATAL("dds_create_reader: %s\n", dds_strretcode(-reader[i]));
     }
@@ -44,9 +39,7 @@ int main(int argc, char **argv)
     printf("---SUBSCRIBER, TOPIC AND READER ARE CREATED---\n");
     fflush (stdout);
     
-    // Allocate space equal to the message size and samples[0] is starting point
     samples[0] = myMessage_Msg__alloc ();
-
 
     while(1)
     {
@@ -67,7 +60,6 @@ int main(int argc, char **argv)
         }
     }
 
-    // Release the resources
     myMessage_Msg_free (samples[0], DDS_FREE_ALL);
 
     rc = dds_delete (participant);
