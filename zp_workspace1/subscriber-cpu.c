@@ -5,16 +5,8 @@
 
 void data_handler(z_loaned_sample_t *sample, void *arg)
 {   
-    //static uint64_t counter = 0;
     z_owned_slice_t output_data;
     z_bytes_to_slice(z_sample_payload(sample), &output_data);
-
-    /*
-    for(int i = 0; i < z_slice_len(z_loan(output_data)); i++)
-    {
-        printf("RECEIVED >>> %d\n", *(z_slice_data(z_loan(output_data))) + i);
-    }
-    */
    
     z_drop(z_move(output_data));
 }
@@ -24,6 +16,7 @@ int main (int argc, char** argv)
     z_owned_config_t config; 
     z_config_default(&config);
 
+    // UDP Multicast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
     
