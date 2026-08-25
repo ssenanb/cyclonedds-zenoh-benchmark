@@ -18,12 +18,13 @@ int main (int argc, char** argv)
     z_publisher_options_default(&opts);
     opts.is_express = true;
     
-    uint8_t value[262144];
+    uint8_t value[8]; // Configurable based on payload size
     for(size_t i = 0; i < sizeof(value) / sizeof(value[0]); i++)
     {
         value[i] = (uint8_t)i;
     }
 
+    // UDP Multicast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
     
