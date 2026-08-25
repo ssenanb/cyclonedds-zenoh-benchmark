@@ -42,7 +42,7 @@ int data_handler(z_loaned_sample_t *sample)
         {
             average_latency = (uint64_t)(total_latency / 100000);
             printf("Latency: %" PRIu64 "us\n", average_latency);
-           // return 0;
+            return 0;
         }
     }
 
