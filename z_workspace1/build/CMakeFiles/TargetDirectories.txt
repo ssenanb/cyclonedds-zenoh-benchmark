@@ -1,0 +1,9 @@
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zPublisherCPU.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zPublisherLatency.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zPublisherThroughput.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zSubscriberCPU.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zSubscriberLatency.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zSubscriberThroughput.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/zSubscriberThroughputv1.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/edit_cache.dir
+/home/seninit/zenoh-c/z_workspace1/build/CMakeFiles/rebuild_cache.dir

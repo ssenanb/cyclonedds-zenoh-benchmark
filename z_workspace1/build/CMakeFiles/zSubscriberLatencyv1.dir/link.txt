@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zSubscriberLatencyv1.dir/subscriber-latency-v1.c.o" -o zSubscriberLatencyv1  -Wl,-rpath,/usr/local/lib /usr/local/lib/libzenohc.so 

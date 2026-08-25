@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zSubscriberCPU.dir/subscriber-cpu.c.o" -o zSubscriberCPU  -Wl,-rpath,/usr/local/lib /usr/local/lib/libzenohc.so 

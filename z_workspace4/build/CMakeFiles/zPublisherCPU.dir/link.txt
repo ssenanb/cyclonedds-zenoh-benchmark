@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zPublisherCPU.dir/publisher-cpu.c.o" -o zPublisherCPU  -Wl,-rpath,/usr/local/lib /usr/local/lib/libzenohc.so 

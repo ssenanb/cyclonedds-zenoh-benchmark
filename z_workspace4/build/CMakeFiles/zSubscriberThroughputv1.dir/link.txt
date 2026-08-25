@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/zSubscriberThroughputv1.dir/subscriber-throughput-v1.c.o" -o zSubscriberThroughputv1  -Wl,-rpath,/usr/local/lib /usr/local/lib/libzenohc.so 
