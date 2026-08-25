@@ -27,11 +27,11 @@ int main (int argc, char** argv)
     
     uint8_t value[8] = {1, 2, 3, 4, 5, 6, 7, 8};
 
+    // UDP Multicast - P2P
     zp_config_insert(z_loan_mut(config), Z_CONFIG_MODE_KEY, Z_CONFIG_MODE_PEER);
     zp_config_insert(z_loan_mut(config), Z_CONFIG_LISTEN_KEY, "udp/224.0.0.123:7447#iface=lo");
     
-    z_result_t rt = z_open(&session, z_move(config), NULL);
-    printf("%d\n",rt);
+    z_open(&session, z_move(config), NULL);
 
     for(int i = 0; i < COUNTER; i++)
     {
@@ -53,7 +53,6 @@ int main (int argc, char** argv)
 
             z_publisher_put(z_loan(pub[i]), z_move(payload), NULL);  
             
-            //z_sleep_ms(1);
         }
     }
 
