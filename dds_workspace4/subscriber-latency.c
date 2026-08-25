@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 
                         counter++;
 
-                        if(counter > 1000)
+                        if(counter > 10000)
                         {
                             uint64_t sent_time;
                             memcpy(&sent_time, msg->data, sizeof(uint64_t));
@@ -85,9 +85,9 @@ int main(int argc, char **argv)
 
                             total_latency += latency;
 
-                            if(counter == 11000)
+                            if(counter == 110000)
                             {
-                                average_latency = (uint64_t)(total_latency / 10000);
+                                average_latency = (uint64_t)(total_latency / 100000);
 	                            printf("Latency: %" PRIu64 "us\n", average_latency);
                                 return 0;
                             }
