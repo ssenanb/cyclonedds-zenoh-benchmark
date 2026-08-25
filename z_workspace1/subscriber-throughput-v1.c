@@ -24,7 +24,6 @@ int data_handler(z_loaned_sample_t *sample)
     z_owned_slice_t output_data;
     z_bytes_to_slice(z_sample_payload(sample), &output_data);
 
-
     counter++;
 
     if(counter == 10001)
