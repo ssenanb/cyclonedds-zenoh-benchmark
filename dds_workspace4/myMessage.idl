@@ -2,6 +2,6 @@ module myMessage
 {
     struct Msg
     {
-        uint8 data[262144];
+        uint8 data[8]; // Configurable based on payload size
     };
 };
